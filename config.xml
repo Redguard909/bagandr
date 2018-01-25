@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns:tizen="http://tizen.org/ns/widgets" xmlns="http://www.w3.org/ns/widgets" id="http://yourdomain/Bagandr1" version="1.0.0" viewmodes="maximized">
+    <tizen:application id="IFv9rxB1N4.Bagandr1" package="IFv9rxB1N4" required_version="3.0"/>
+    <content src="index.html"/>
+    <feature name="http://tizen.org/feature/screen.size.all"/>
+    <icon src="icon.png"/>
+    <name>Bagandr1</name>
+    <tizen:profile name="mobile"/>
+</widget>
