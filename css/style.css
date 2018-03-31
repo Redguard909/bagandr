@@ -57,6 +57,16 @@ button {
     font-weight: bold;
     font-size: 5em;
 }
+#footerArea {
+	font-size: 5px;
+	text-align: center;
+}
+#register-button
+{
+	display: block;
+    width: 100%;
+	font-size:  4em;
+}
 .mainhead {
 	font-family: 'Lobster', arial; 
 	font-size: 40px;
