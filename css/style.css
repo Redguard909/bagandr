@@ -74,6 +74,29 @@ button {
 	text-align: center;
 	margin-top: 20px;
 }
+.regform {
+	width: 600px; 
+	padding-left: 15px; 
+	padding-top: 15px;
+}
+.reg{
+	border-bottom: 3px solid #008B8B;
+	border-left: none; 
+	border-top: none;
+	border-right: none ; 
+	background: #E0FFFF;
+}
+.sub{
+	width: 200px;
+	margin-top: 40px;
+	border-radius: 5px 5px 0px 0px;
+	border-color: #008B8B;
+	font-size: 20px;
+	font-family: 'Lobster', arial;
+	background-color: #E0FFFF;
+    color: #008B8B;	
+    cursor: pointer;
+}
 /* 
 button #00FF7F
 background #E0FFFF
