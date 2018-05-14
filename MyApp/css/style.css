@@ -156,6 +156,15 @@ svg {
     font-family: 'Comic Sans MS', arial;
     text-align: center;	
 }
+.ans{
+	float: right;
+	margin-right: 10px;
+	font-size: 15px;
+	color: #505050	;
+    font-family: 'Comic Sans MS', arial;
+    text-align: center;	
+	
+}
 .sub{
 	width: 230px;
 	margin-top: 70px;
@@ -199,11 +208,11 @@ svg {
 	border-top: none; 
 	border-right: none ;
 	font-size: 15px;
-	
+}
+
 	
 }
 .test{
-	
 	padding: 10px;
 	font-size: 15px;
 	color: #505050	;
