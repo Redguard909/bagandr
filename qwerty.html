@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="http://allfont.ru/allfont.css?fonts=lobster" rel="stylesheet" type="text/css"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Tizen Mobile Web Basic Template" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="js/main.js"></script>
+    
+    <title>Platform for testing knowledge</title>
+
+
+</head>
+<body  style="background-color:#F0FFFF; font-family: Monotype Corsiva; font-size: 40px; margin-top: 200px;">
+<?php
+    if (isset($_POST['studname'])) { $studname = $_POST['studname'];}
+    if (isset($_POST['clnum'])) { $clnum=$_POST['clnum'];}
+    if (isset($_POST['scnum'])) { $scnum = $_POST['scnum'];}
+    if (isset($_POST['studemail'])) { $studemail=$_POST['studemail'];}   
+    if (isset($_POST['password'])) { $password=$_POST['password'];}
+    if (isset($_POST['postsc'])) { $postsc = $_POST['postsc'];}
+    
+    $studname = stripslashes($studname);
+    $studname = htmlspecialchars($studname);
+    $clnum = stripslashes($clnum);
+    $clnum = htmlspecialchars($clnum);
+    $scnum = stripslashes($scnum);
+    $scnum = htmlspecialchars($scnum);
+    $studemail = stripslashes($studemail);
+    $studemail = htmlspecialchars($studemail);
+    $password = stripslashes($password);
+    $password = htmlspecialchars($password);
+    $postsc = stripslashes($postsc);
+    $postsc = htmlspecialchars($postsc);
+
+
+    $studname = trim($studname);
+    $clnum = trim($clnum);
+    $scnum = trim($scnum);
+    $studemail = trim($studemail);
+    $password = trim($password);
+    $postsc = trim($postsc);
+
+    require_once 'connection.html';
+          $link = mysqli_connect($host, $user, $password, $database) 
+          or die("Ошибка " . mysqli_error($link));
+          mysqli_set_charset( $link, 'utf8' );
+    $query="SELECT id FROM studusers WHERE studname='$studname'";
+    $result = mysqli_query($link,$query)or die("Ошибка " . mysqli_error($link));
+    $myrow = mysqli_fetch_array($result);
+    if (!empty($myrow['id'])) {
+    exit ("Извините, введённый вами логин уже зарегистрирован. Введите другой логин. <a href='stud-autorisation.html'><br>Назад</a>")?>
+    <?php }
+    $query2="INSERT INTO studusers (studname,clnum,scnum,studemail,password,postsc) VALUES('$studname','$clnum', '$scnum','$studemail','$password','$postsc')";
+    $result2 = mysqli_query ($link, $query2) or die("Ошибка " . mysqli_error($link));
+    if ($result2=='TRUE')
+    {
+    echo "Вы успешно зарегистрированы! Теперь вы можете зайти на сайт. <a href='studroom.html'><br>Личный кабинет</a>";
+    }
+    ?>
+    </body>
+</html>

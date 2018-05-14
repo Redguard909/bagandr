@@ -12,32 +12,33 @@
 
 
 </head>
-<body align="center" style="background-color:#F0FFFF; font-family: Monotype Corsiva; font-size: 40px; margin-top: 200px;">
+<body  style="text-align: center; font-size: 25px; font-family: 'Lobster', arial; ">
+<a href="studroom.html"><br>Личный кабинет</a>
 <?php
-    if (isset($_POST['login'])) { $login = $_POST['login'];}
-    if (isset($_POST['password'])) { $password=$_POST['password'];}
-    $login = stripslashes($login);
-    $login = htmlspecialchars($login);
- $password = stripslashes($password);
-    $password = htmlspecialchars($password);
-    $login = trim($login);
-    $password = trim($password);
-    require_once 'connection.php';
-          $link = mysqli_connect($host, $user, $password, $database) 
-          or die("Ошибка " . mysqli_error($link));
-          mysqli_set_charset( $link, 'utf8' );
-    $query="SELECT id FROM users WHERE login='$login'";
-    $result = mysqli_query($link,$query)or die("Ошибка " . mysqli_error($link));
-    $myrow = mysqli_fetch_array($result);
-    if (!empty($myrow['id'])) {
-    exit ("Извините, введённый вами логин уже зарегистрирован. Введите другой логин. <a href='users.php'><br>Назад</a>")?>
-    <?php }
-    $query2="INSERT INTO users (login,password) VALUES('$login','$password')";
-    $result2 = mysqli_query ($link, $query2) or die("Ошибка " . mysqli_error($link));
-    if ($result2=='TRUE')
+require_once 'connection.php';
+
+    if (isset($_POST['studname'])&&isset($_POST['clnum'])&&isset($_POST['scnum'])&&isset($_POST['studemail'])&&isset($_POST['password'])&&isset($_POST['postsc'])) 
+    { 
+
+    $link = mysqli_connect($host, $user, $password, $database) 
+    or die("Ошибка " . mysqli_error($link));
+
+    $studname = htmlentities(mysqli_real_escape_string($link, $_POST['studname']));
+    $clnum = htmlentities(mysqli_real_escape_string($link, $_POST['clnum']));
+    $scnum = htmlentities(mysqli_real_escape_string($link, $_POST['scnum']));
+    $studemail = htmlentities(mysqli_real_escape_string($link, $_POST['studemail']));
+    $password = htmlentities(mysqli_real_escape_string($link, $_POST['password']));
+    $postsc = htmlentities(mysqli_real_escape_string($link, $_POST['postsc']));
+    
+    $query="INSERT INTO studusers VALUES(studname,clnum,scnum,studemail,password,postsc) VALUES('$studname','$clnum', '$scnum','$studemail','$password','$postsc')";
+    $result = mysqli_query ($link, $query) or die("Ошибка " . mysqli_error($link));
+    if ($result)
     {
-    echo "Вы успешно зарегистрированы! Теперь вы можете зайти на сайт. <a href='index.php'><br>Главная страница</a>";
+    echo "Вы успешно зарегистрированы! Теперь вы можете зайти на сайт. <a href="studroom.html"><br>Личный кабинет</a>";
     }
+    mysqli_close($link);
+   }
     ?>
+    
     </body>
 </html>
