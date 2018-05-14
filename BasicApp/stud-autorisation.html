@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="http://allfont.ru/allfont.css?fonts=lobster"
+	rel="stylesheet" type="text/css" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="description" content="Tizen Mobile Web Basic Template" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script src="js/main.js"></script>
+
+<title>Autorization for students</title>
+</head>
+<body>
+	 <div class="ui-page" id="main">
+		<div class="ui-header">
+			<h1 data-collapsed="false" style="text-align: center; font-size: 25px; font-family: 'Lobster', arial; margin-top: 40px;">Регистрация учащегося</h1>
+		</div>
+		<!-- /header -->
+
+		<div class="ui-content">
+			<form action="form.php" method="POST" name="form">
+				<table style="text-align: center;">
+<tr>
+						<td class="regform">
+						<label>ФИО </label></td>
+					</tr>
+					<tr>
+						<td><input type="text" name="studname"
+							placeholder="Введите ФИО  полностью" required size="25"
+							maxlength="100" class="reg" required></td>
+					</tr>
+					<tr>
+						<td class="regform">
+						<label>Класс </label></td>
+					</tr>
+					<tr>
+						<td><input type="text" name="clnum"
+							placeholder="Введите номер  Вашего класса" required size="25"
+							maxlength="2" class="reg" required></td>
+					</tr>
+					<tr>
+						<td class="regform">
+						<label>Ваша школа </label></td>
+					</tr>
+					<tr>
+						<td><input type="text" name="scnum"
+							placeholder="Введите номер Вашей школы " required size="25"
+							maxlength="5" class="reg" required></td>
+					</tr>
+					<tr>
+						<td class="regform">
+						<label>Почта</label></td>
+					</tr>
+					<tr>
+						<td><input type="email" name="studemail"
+							placeholder="Введите Ваш почтовый адрес" required size="25"
+							maxlength="25" class="reg" required></td>
+					</tr>
+					<tr>
+						<td class="regform">
+						<label>Пароль</label></td>
+
+					</tr>
+					<tr>
+						<td><input type="password" name="password"
+							placeholder="Введите пароль " required size="25" maxlength="25" class="reg" required>
+						</td>
+					</tr>
+<tr>
+						<td class="regform"><label>В какую школу поступаем?</label></td>
+					</tr>
+                    <td><select name="postsc" class="reg" style="width: 208px;" required><option>Выберите из списка</option>
+
+<option>ГБОУ  № 179</option>
+
+<option>Лицей № 1580</option>
+
+<option>ГБОУ школа № 57</option>
+
+<option>Школа № 1329</option>
+
+<option>Лицей Вторая школа</option>
+</select></td>
+				
+				</table>
+			</form>
+		</div>
+		
+		<!-- /content -->
+		<div class="ui-footer" id="footerArea" style="padding-top: 15px;">
+			<input type="submit" name="submit" value="Создать аккаунт" class="sub">		
+		</div>
+	</div>
+	<!-- /page -->
+
+	<script type="text/javascript" src="./lib/tau/mobile/js/tau.js"></script>
+	<script src="./js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+ <!DOCTYPE html>
+<html>
+
+<head>
+    <link href="http://allfont.ru/allfont.css?fonts=lobster" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Tizen Mobile Web Basic Template" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="js/main.js"></script>
+    <script type="text/javascript">
+
+        function startTimer() {
+            var my_timer = document.getElementById("my_timer");
+            var time = my_timer.innerHTML;
+            var arr = time.split(":");
+            var h = arr[0];
+            var m = arr[1];
+            var s = arr[2];
+            if (s == 0) {
+              if (m == 0) {
+                if (h == 0) {
+                  alert("Время вышло");
+                  window.location.reload();
+                  return;
+                }
+                h--;
+                m = 60;
+                if (h < 10) h = "0" + h;
+              }
+              m--;
+              if (m < 10) m = "0" + m;
+              s = 59;
+            }
+            else s--;
+            if (s < 10) s = "0" + s;
+            document.getElementById("my_timer").innerHTML = h+":"+m+":"+s;
+            setTimeout(startTimer, 1000);
+          }
+    </script>
+    <script type="text/javascript">
+        function a()
+        {
+        document.getElementById('info1').innerHTML = 'Правильный ответ: 10';
+        document.getElementById('info2').innerHTML = 'Правильный ответ: 1680';
+        document.getElementById('info3').innerHTML = 'Правильный ответ: 3024';
+        document.getElementById('info4').innerHTML = 'Правильный ответ: 246';
+        document.getElementById('info5').innerHTML = 'Правильный ответ: 7054320';
+        document.getElementById('info6').innerHTML = 'Правильный ответ: 56';
+        document.getElementById('info7').innerHTML = 'Правильный ответ: 105';
+        document.getElementById('info8').innerHTML = 'Правильный ответ: 30; 15';
+        document.getElementById('info9').innerHTML = 'Правильный ответ: 24 и 3360';
+        document.getElementById('info10').innerHTML = 'Правильный ответ: Чисел без единицы среди чисел от 1 до 1 000 000 больше, чем тех, в записи которых единица есть';
+        }
+    </script>
+
+    <title>Личный кабинет ученика</title>
+
+
+</head>
+
+<body onLoad="startTimer();">
+    <div class="mainhead">Тест</div>
+    <p><span id="my_timer" style="border: 2px solid #FF4040;border-radius: 10px;box-shadow: 2px 2px 2px #aaa; font-weight: bold;">01:10:00</span>
+    </p>
+    <form id="main-form-id" name="form">
+
+
+        <!-- <div class="test"><b>Задача 1.</b> У мамы 2 яблока и 3 груши. Каждый день в течение 5 дней подряд она выдает по одному фрукту. Сколькими способами это может быть сделано?</div>
+        <input type="number" name="answer" placeholder="Введите ответ " required size="25" maxlength="2"
+        class="reg" style="margin-left: 10px;" required>
+        <div class="ans" id="info1"></div>
+        <div class="test"><b>Задача 2.</b> Предприятие может предоставить работу по одной специальности 4 женщинами, по другой - 6 мужчинам, по третьей - 3 работникам независимо от пола. Сколькими способами можно заполнить вакантные места, если имеются 14 претендентов:
+            6 женщин и 8 мужчин?</div>
+        <input type="number" name="answer" placeholder="Введите ответ " required size="25" maxlength="2" class="reg" style="margin-left: 10px;" required>
+        <div class="ans" id="info2"></div>
+        <div class="test"><b>Задача 3.</b> В пассажирском поезде 9 вагонов. Сколькими способами можно рассадить в поезде 4 человека, при условии, что все они должны ехать в различных вагонах?</div>
+        <input type="number" name="answer" placeholder="Введите ответ " required
+        size="25" maxlength="2" class="reg" style="margin-left: 10px;" required>
+        <div class="ans" id="info3"></div>
+        <div class="test"><b>Задача 4.</b> В группе 9 человек. Сколько можно образовать разных подгрупп при условии, что в подгруппу входит не менее 2 человек?</div>
+        <input type="number" name="answer" placeholder="Введите ответ " required size="25" maxlength="2" class="reg"
+        style="margin-left: 10px;" required>
+        <div class="ans" id="info4"></div>
+        <div class="test"><b>Задача 5.</b> Группу из 20 студентов нужно разделить на 3 бригады, причем в первую бригаду должны входить 3 человека, во вторую — 5 и в третью — 12. Сколькими способами это можно сделать.</div>
+        <input type="number" name="answer" placeholder="Введите ответ "
+        required size="25" maxlength="2" class="reg" style="margin-left: 10px;" required>
+        <div class="ans" id="info5"></div>
+        <div class="test"><b>Задача 6.</b> Для участия в команде тренер отбирает 5 мальчиков из 10. Сколькими способами он может сформировать команду, если 2 определенных мальчика должны войти в команду?</div>
+        <input type="number" name="answer" placeholder="Введите ответ "
+        required size="25" maxlength="2" class="reg" style="margin-left: 10px;" required>
+        <div class="ans" id="info6"></div>
+        <div class="test"><b>Задача 7.</b> В шахматном турнире принимали участие 15 шахматистов, причем каждый из них сыграл только одну партию с каждым из остальных. Сколько всего партий было сыграно в этом турнире?</div>
+        <input type="number" name="answer" placeholder="Введите ответ "
+        required size="25" maxlength="2" class="reg" style="margin-left: 10px;" required>
+        <div class="ans" id="info7"></div>
+        <div class="test"><b>Задача 8.</b> Сколько различных дробей можно составить из чисел 3, 5, 7, 11, 13, 17 так, чтобы в каждую дробь входили 2 различных числа? Сколько среди них будет правильных дробей?</div>
+        <input type="number" name="answer" placeholder="Введите ответ "
+        required size="25" maxlength="2" class="reg" style="margin-left: 10px;" required>
+        <div class="ans" id="info8"></div>
+        <div class="test"><b>Задача 9.</b> Сколько слов можно получить, переставляя буквы в слове Гора и Институт?</div>
+        <input type="number" name="answer" placeholder="Введите ответ " required size="25" maxlength="2" class="reg" style="margin-left: 10px;" required>
+        <div class="ans" id="info9"></div>
+        <div class="test"><b>Задача 10.</b> Каких чисел от 1 до 1 000 000 больше: тех, в записи которых встречается единица, или тех, в которых она не встречается?</div>
+        <input type="number" name="answer" placeholder="Введите ответ " required size="25" maxlength="2" class="reg"
+        style="margin-left: 10px;" required>
+        <div class="ans" id="info10"></div>-->
+        
+        <button class="sub1">Узнать ответы</button>
+
+    </form>
+    <div id="kolvo"></div>
+    <progress id="progr" value="0" max="0"></progress>
+    
+    <a href="studroom.html" style="color: #9DA1AA;  margin-left: 150px;">Назад</a>	
+<br>
+<script src="js/jquery.js"></script>
+<script type="text/javascript">
+
+	var myArray = [{"id": 1, "question": "У мамы 2 яблока и 3 груши. Каждый день в течение 5 дней подряд она выдает по одному фрукту. Сколькими способами это может быть сделано?", "answer": 10 }, 
+	               {"id": 2, "question": "text", "answer": 223}];
+
+	$(document).ready( function() {
+		init();
+		$("#progr").attr("max", myArray.length);
+		
+		
+		$(".sub1").click(function(){
+			var errorCount = 0;
+			for (var i = 0; i < myArray.length; i++) {
+				if ($("#quest_" + myArray[i].id).val() != myArray[i].answer) {
+					errorCount++;
+					}
+				}
+			console.log("Количество ошибок " + errorCount);
+			$("#progr").val(myArray.length - errorCount);
+			$("#kolvo").text("Количество ошибок " + errorCount);
+			return false;
+			});
+		
+	});
+
+	function init(){
+		var htmlCode = "";
+		for(var i=0; i < myArray.length; i++) {
+	
+			htmlCode += '<div class="test"><b>Задача ' + i + '.</b> ' + myArray[i].question + '</div>' +
+	        			'<input id="quest_' + myArray[i].id + '" type="number" name="answer" placeholder="Введите ответ" required size="25" maxlength="2"' +
+	        					+ 'class="reg" style="margin-left: 10px;" required>' +
+	        			'<div class="ans" id="info1"></div>';
+	
+			console.log(htmlCode);
+	
+		}
+	
+		$("#main-form-id").prepend(htmlCode);
+	}
+	 
+	
+
+	//window.location.assign("");
+        
+</script>
+</body>
+
+
+</html>

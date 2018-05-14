@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+	<html lang="ru">
+	<head>
+		<title>To-Do лист</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
+		<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.17/themes/redmond/jquery-ui.css" type="text/css">
+        <link rel="stylesheet" href="css/header.css" type="text/css">
+		<script type="text/javascript" src="js/manageTodo.js"></script>
+	</head>
+	<body>
+<div class="mainhead">Построй план, по которому будешь изучать тему </div>
+
+			<div id="bodyWrapper">
+				<div id="todo_wrapper" >
+					<div class="lst">Список дел</div>
+					<ul class="list">
+					</ul>
+				</div>
+
+				<div id="todo_form" class="white_bg">
+					<div id="form_wrapper">
+						<textarea id="todo_item_text" placeholder="Что нужно сделать..."></textarea>
+						<input type="text" id="todo_due_date" placeholder="Установить дату..." />
+					</div>
+
+					<input type="submit" id="create_todo" value="Добавить" class="sub"/>
+				</div>
+			</div>
+			<br>
+<a href="studroom.html" style="color: #9DA1AA;  margin-left: 150px; margin-bottom: 20px; margin-toз: 20px;">Назад</a>
+	</body>
+	</html>
