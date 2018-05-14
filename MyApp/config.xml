@@ -4,7 +4,7 @@
         <tizen:src name="index.html"/>
         <tizen:operation name="http://tizen.org/appcontrol/operation/appcall"/>
     </tizen:app-control>
-    <tizen:application id="dySVjyWLxG.MyApp" package="dySVjyWLxG" required_version="2.3"/>
+    <tizen:application id="dySVjyWLxG.MyApp" package="dySVjyWLxG" required_version="2.4"/>
     <content src="index.html"/>
     <feature name="http://tizen.org/feature/screen.size.all"/>
     <icon src="icon.png"/>
@@ -12,4 +12,5 @@
     <tizen:privilege name="http://tizen.org/privilege/application.info"/>
     <tizen:privilege name="http://tizen.org/privilege/application.launch"/>
     <tizen:profile name="mobile"/>
+    <tizen:setting screen-orientation="portrait" context-menu="enable" background-support="disable" encryption="disable" install-location="auto" hwkey-event="enable"/>
 </widget>
